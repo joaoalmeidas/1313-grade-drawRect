@@ -8,15 +8,15 @@ public class Grade extends JPanel{
 	@Override
 	public void paintComponent(Graphics g) {
 		
-		for(int x = getWidth()/8; x < getWidth()/8 * 8; x += getWidth()/8) {
+		for(int x = getWidth()/8; x < getWidth()/8*7; x += getWidth()/8) {
 			
-			g.drawLine(x, 0, x, getHeight());
+			g.drawRect(x, -1, getWidth()/8, getHeight() + 1);
 			
 		}
 		
-		for(int y = getHeight()/8; y < getHeight()/8 * 8; y += getHeight()/8) {
+		for(int y = getHeight()/8; y < getHeight()/8*7; y += getHeight()/8) {
 			
-			g.drawLine(0, y, getWidth(), y);
+			g.drawRect(-1, y, getWidth() + 1, getHeight()/8);
 			
 		}
 		
